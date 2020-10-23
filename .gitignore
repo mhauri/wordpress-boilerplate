@@ -1,0 +1,9 @@
+.idea
+.env
+/bin
+/vendor
+/public/*
+!/public/.htaccess
+!/public/index.php
+!/public/wp-config.php
+!/public/robots.txt

@@ -1,0 +1,70 @@
+{
+  "name": "mhauri/wordpress-boilerplate",
+  "type": "project",
+  "license": "MIT",
+  "description": "The WordPress Boilerplate with state-of-the-art development tools and painless configuration",
+  "homepage": "https://marcelhauri.ch/",
+  "authors": [
+    {
+      "name": "Marcel Hauri",
+      "email": "marcel@hauri.me",
+      "homepage": "https://github.com/mhauri"
+    }
+  ],
+  "keywords": [
+    "wordpress", "composer", "dotenv", "wp-cli", "boilerplate", "modern"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "johnpbloch/wordpress": ">=5.5",
+    "rarst/update-blocker": "^1.1",
+    "somework/composer-symlinks": "^1.3",
+    "vlucas/phpdotenv": "^2.2",
+    "wp-cli/wp-cli-bundle": "^2.4",
+    "wpackagist-theme/twentytwenty":"1.5"
+  },
+  "extra": {
+    "wordpress-install-dir": "vendor/wordpress",
+    "installer-paths": {
+      "public/wp-content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "public/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "public/wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    },
+    "somework/composer-symlinks": {
+      "symlinks": {
+        "public/wp-config.php": "vendor/wordpress/wp-config.php",
+        "vendor/wordpress/wp-admin": "public/wp-admin",
+        "vendor/wordpress/wp-includes": "public/wp-includes",
+        "vendor/wordpress/wp-activate.php": "public/wp-activate.php",
+        "vendor/wordpress/wp-blog-header.php": "public/wp-blog-header.php",
+        "vendor/wordpress/wp-comments-post.php": "public/wp-comments-post.php",
+        "vendor/wordpress/wp-cron.php": "public/wp-cron.php",
+        "vendor/wordpress/wp-links-opml.php": "public/wp-links-opml.php",
+        "vendor/wordpress/wp-load.php": "public/wp-load.php",
+        "vendor/wordpress/wp-login.php": "public/wp-login.php",
+        "vendor/wordpress/wp-mail.php": "public/wp-mail.php",
+        "vendor/wordpress/wp-settings.php": "public/wp-settings.php",
+        "vendor/wordpress/wp-trackback.php": "public/wp-trackback.php",
+        "vendor/wordpress/xmlrpc.php": "public/xmlrpc.php"
+      },
+      "force-create": false,
+      "skip-missing-target": true,
+      "absolute-path": false,
+      "throw-exception": true
+    }
+  },
+  "config": {
+    "bin-dir": "bin"
+  }
+}
