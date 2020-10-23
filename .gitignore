@@ -7,3 +7,4 @@
 !/public/index.php
 !/public/wp-config.php
 !/public/robots.txt
+composer.lock
